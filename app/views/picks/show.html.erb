@@ -1,0 +1,24 @@
+<h2>Review of Pick</h2>
+
+<table class = "table">
+	<thead>
+		<tr>
+			<th>Username</th>
+			<th>Week Number</th>
+			<th>Picks</th>
+		</tr>
+	</thead>
+	<tbody>
+  	<tr>
+      <th><%=  @user.username %> </th>
+      <th><%=  @pick.week_number %> </th>
+      <th><%=  @pick.pick_content %> </th>
+      <th><%= link_to "Edit This Pick", edit_user_pick_path %></th>
+
+
+  	</tr>
+</tbody>
+</table>
+
+<h4><%= link_to "Back to My Picks", user_picks_path(@user, @pick) %></h4>
+

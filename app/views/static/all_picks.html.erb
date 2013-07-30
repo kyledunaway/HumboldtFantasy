@@ -1,0 +1,20 @@
+<h2>Weekly Picks</h2>
+
+<table class = "table">
+	<thead>
+		<tr>
+			<th>Week Number</th>
+			<th>Username</th>
+			<th>Picks</th>
+		</tr>
+	</thead>
+	<tbody>
+  <% @picks.each do |p| %>
+  	<tr>
+      <th><%=  p.week_number %> </th>
+      <th><%=  p.username %> </th>
+      <th><%=  p.pick_content %>       </th>
+  	</tr>
+  <% end %>
+</tbody>
+</table>
