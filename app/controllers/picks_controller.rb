@@ -21,13 +21,16 @@ class PicksController < ApplicationController
 
 	def index
 		@user = User.find(params[:user_id])
-		@picks = @user.picks.all
-
+		if current_user.id == @user.id
+			@picks = @user.picks.all
+		else
+			redirect_to user_path(current_user), notice: "Access Denied to Other Users Picks"
+		end
 	end
 
 	def show
+		@pick = Pick.find(params[:id])
 		@user = User.find(params[:user_id])
-		@pick = Pick.find(params[:id]) 
 	end
 
 	def edit

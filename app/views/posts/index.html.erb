@@ -1,0 +1,16 @@
+<h1>Message Board</h1>
+
+<div id="posts">
+  <% @posts.each do |post| %>
+    <h4><%= link_to post.title, post %></h4>
+    <%= simple_format post.text %>
+    <h6>Posted By: <%= post.user.username %></h6>
+    <% if current_user.id == post.user.id %>
+    <%= link_to "Edit   ", edit_post_path(post) %>
+    <%= link_to '|   Delete', post, :method => :delete, :confirm => "Are you sure?" %>
+    <% end %> 
+  <% end %>
+</div>
+
+<h4><%= link_to "Post a New Message", new_post_path, :class => "new_message"%></h4>
+

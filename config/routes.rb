@@ -1,5 +1,5 @@
 HumboldtFantasy::Application.routes.draw do
-  
+
   get "log_out" => "sessions#destroy", :as => "log_out"
   get "log_in" => "sessions#new", :as => "log_in"
   get "sign_up" => "users#new", :as => "sign_up"
@@ -9,6 +9,7 @@ HumboldtFantasy::Application.routes.draw do
   get "static/all_picks"
 
 
+
   root :to => "sessions#new"
   
   resources :users do
@@ -16,5 +17,7 @@ HumboldtFantasy::Application.routes.draw do
   end
 
   resources :sessions
+
+  resources :posts
   
 end
