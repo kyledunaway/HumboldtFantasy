@@ -1,0 +1,20 @@
+class Standing < ActiveRecord::Base
+  attr_accessible :player1, 
+  				  :player2,
+  				  :player3,
+  				  :player4,
+  				  :player5,
+  				  :player6,
+  				  :player7,
+  				  :player8,
+  				  :player9,
+  				  :player10,
+  				  :player11,
+  				  :player12,
+  				  :player13,
+  				  :player14,
+  				  :player15,
+  				  :division1,
+  				  :division2,
+  				  :division3
+end

@@ -1,0 +1,81 @@
+<p id="notice"><%= notice %></p>
+
+
+<table class = "table">
+	<thead>
+		<tr>
+			<th>Blue Lake Crew </th>
+			<th></th>
+			<th>Bear River Crew</th>
+			<th></th>
+			<th>Lakey and Co   </th>
+			<th></th>
+		</tr>
+	</thead>
+	<tbody>
+  	<tr>
+      <th>Jake</th>
+      <th><%=  @standing.player1 %> </th>
+      <th>Jason</th>
+      <th><%=  @standing.player2 %> </th>
+      <th>Ron</th>
+      <th><%=  @standing.player3 %> </th>
+  	</tr>
+  	<tr>
+      <th>Eric</th>
+      <th><%=  @standing.player4 %> </th>
+      <th>Wayne</th>
+      <th><%=  @standing.player5 %> </th>
+      <th>Damian</th>
+      <th><%=  @standing.player6 %> </th>
+  	</tr>
+  	<tr>
+      <th>Pete</th>
+      <th><%=  @standing.player7 %> </th>
+      <th>Justin</th>
+      <th><%=  @standing.player8 %> </th>
+      <th>Josh</th>
+      <th><%=  @standing.player9 %> </th>
+  	</tr>
+  	<tr>
+      <th>Will</th>
+      <th><%=  @standing.player10 %> </th>
+      <th>Carl</th>
+      <th><%=  @standing.player11 %> </th>
+      <th>Art</th>
+      <th><%=  @standing.player12 %> </th>
+  	</tr>
+  	<tr>
+      <th>Zach</th>
+      <th><%=  @standing.player13 %> </th>
+      <th>Kyle</th>
+      <th><%=  @standing.player14 %> </th>
+      <th>Marcus</th>
+      <th><%=  @standing.player15 %> </th>
+  	</tr>
+  	<tr>
+  		<th></th>
+  		<th></th>
+  		<th></th>
+  		<th></th>
+  		<th></th>
+  		<th></th>
+
+  	</tr>
+  	<tr>
+      <th>Total</th>
+      <th><%=  @standing.division1 %> </th>
+      <th>Total</th>
+      <th><%=  @standing.division2 %> </th>
+      <th>Total</th>
+      <th><%=  @standing.division3 %> </th>
+  	</tr>
+</tbody>
+</table>
+
+
+
+<% if current_user.id == 2 %>
+
+    <h3><%= link_to 'Edit', edit_standing_path(@standing) %></h3>
+   <% end %>

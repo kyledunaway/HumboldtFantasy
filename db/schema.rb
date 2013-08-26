@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130818045522) do
+ActiveRecord::Schema.define(:version => 20130826044002) do
 
   create_table "picks", :force => true do |t|
     t.text     "pick_content"
@@ -27,6 +27,29 @@ ActiveRecord::Schema.define(:version => 20130818045522) do
     t.text     "text"
     t.integer  "user_id"
     t.string   "username"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
+
+  create_table "standings", :force => true do |t|
+    t.integer  "player1"
+    t.integer  "player2"
+    t.integer  "player3"
+    t.integer  "player4"
+    t.integer  "player5"
+    t.integer  "player6"
+    t.integer  "player7"
+    t.integer  "player8"
+    t.integer  "player9"
+    t.integer  "player10"
+    t.integer  "player11"
+    t.integer  "player12"
+    t.integer  "player13"
+    t.integer  "player14"
+    t.integer  "player15"
+    t.integer  "division1"
+    t.integer  "division2"
+    t.integer  "division3"
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
   end

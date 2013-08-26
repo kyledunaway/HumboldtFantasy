@@ -10,6 +10,14 @@
 
 <h3><%= link_to "Message Board", posts_path %></h3>
 
+<h3><%= link_to "Show Standings", standing_path(1) %></h3>
 
 
+<% if current_user.id == 2 %>
+	
+	<h3>------- COMMISSIONER LINKS -------</h3>
+    <h3><%= link_to "All Picks",  static_all_picks_path %></h3>
+    <h3><%= link_to "Show Standings", standings_path %></h3>
+    <h3><%= link_to "Create Standing", new_standing_path %></h3>
 
+    <% end %> 

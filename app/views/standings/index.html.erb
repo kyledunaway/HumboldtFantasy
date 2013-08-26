@@ -1,0 +1,9 @@
+<h1>Standings, Click Show</h1>
+
+<table>
+<% @standings.each do |standing| %>
+  <tr>
+    <td><%= link_to 'Show', standing %></td>
+  </tr>
+<% end %>
+</table>
