@@ -18,4 +18,8 @@ class UsersController < ApplicationController
 		@user = User.find(params[:id])
 		@picks = @user.picks
 	end
+
+	def index
+		@users = User.all
+	end
 end
