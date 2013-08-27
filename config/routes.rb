@@ -11,7 +11,7 @@ HumboldtFantasy::Application.routes.draw do
 
   get "static/all_picks"
 
-
+  get "static/rules"
 
   root :to => "sessions#new"
   

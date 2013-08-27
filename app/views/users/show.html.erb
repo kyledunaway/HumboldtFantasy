@@ -6,11 +6,16 @@
 
 <h3><%= link_to "View My Weekly Picks" , user_picks_path(@user, @pick) %></h3>
 
+<div id="headerBar"></div>
+
+<h3><%= link_to "Rules" , static_rules_path %></h3>
+
 <h3><%= link_to "Bovada", "http://sports.bovada.lv", :target => '_blank' %></h3>
 
 <h3><%= link_to "Message Board", posts_path %></h3>
 
 <h3><%= link_to "Show Standings", standing_path(1) %></h3>
+
 
 
 <% if current_user.id == 2 %>
