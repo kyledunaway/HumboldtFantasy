@@ -5,6 +5,8 @@
 		<tr>
 			<th>Week Number</th>
 			<th>Picks</th>
+			<th>Time Of Post (changes with edits) </th>
+
 		</tr>
 	</thead>
 	<tbody>
@@ -12,6 +14,9 @@
   	<tr>
       <th><%=  p.week_number %> </th>
       <th><%=  p.pick_content %> </th>
+	  <th><%= l p.updated_at, :format => :sample %> </th>
+
+
       <th><%=  link_to "Edit" , edit_user_pick_path(@user, p) %></th>
 
   	</tr>

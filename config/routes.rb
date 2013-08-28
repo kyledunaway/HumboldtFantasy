@@ -21,6 +21,8 @@ HumboldtFantasy::Application.routes.draw do
 
   resources :sessions
 
-  resources :posts
+  resources :posts do
+    resources :comments
+  end
   
 end

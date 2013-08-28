@@ -6,6 +6,7 @@
 			<th>Week Number</th>
 			<th>Username</th>
 			<th>Picks</th>
+			<th>Time </th>
 		</tr>
 	</thead>
 	<tbody>
@@ -14,6 +15,7 @@
       <th><%=  p.week_number %> </th>
       <th><%=  p.username %> </th>
       <th><%=  p.pick_content %>       </th>
+      <th><%= l p.updated_at, :format => :sample %> </th>
   	</tr>
   <% end %>
 </tbody>

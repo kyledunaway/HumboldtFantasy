@@ -7,5 +7,11 @@
   <strong>Message:</strong>
   <%= @post.text %>
 </p>
+<br></br>
+<h4>Comments</h4>
+<%= render @post.comments %>
+<br></br>
+<h5>Add a comment:</h5>
+<%= render "comments/form" %>
 
 <h3><%= link_to "Back to Message Board", posts_path %></h3>

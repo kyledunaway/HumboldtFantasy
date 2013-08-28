@@ -6,6 +6,8 @@
 			<th>Username</th>
 			<th>Week Number</th>
 			<th>Picks</th>
+			<th>Time</th>
+
 		</tr>
 	</thead>
 	<tbody>
@@ -13,6 +15,7 @@
       <th><%=  @user.username %> </th>
       <th><%=  @pick.week_number %> </th>
       <th><%=  @pick.pick_content %> </th>
+      <th><%= l @pick.updated_at, :format => :sample %> </th>
       <th><%= link_to "Edit This Pick", edit_user_pick_path %></th>
 
 
@@ -21,4 +24,3 @@
 </table>
 
 <h4><%= link_to "Back to My Picks", user_picks_path(@user, @pick) %></h4>
-
