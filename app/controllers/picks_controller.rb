@@ -50,14 +50,14 @@ class PicksController < ApplicationController
   		end
   	end
 
-  	def destroy
-		@user = User.find(params[:user_id])
-  		@pick = Pick.find(params[:id])
-  		@pick.destroy
+	def destroy
+        @pick = Pick.find(params[:id])
+        @pick.destroy
+        redirect_to picks_path, :notice => "Your pick has been deleted successfully."
 
-  		respond_to do |format|
+        respond_to do |format|
   			format.html {redirect_to user_picks_path }
   			format.json {head :no_content}
-  		end
-  	end
+		end
+	end
 end

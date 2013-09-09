@@ -1,5 +1,7 @@
 <h1>Message Board</h1>
 
+
+<h4><%= link_to "Post a New Message", new_post_path, :class => "new_message"%></h4>
 <div id="posts">
   <% @posts.each do |post| %>
     <h4><%= link_to post.title, post %></h4>
@@ -13,6 +15,5 @@
   <% end %>
 </div>
 
-<br></br>
-<h4><%= link_to "Post a New Message", new_post_path, :class => "new_message"%></h4>
+
 
