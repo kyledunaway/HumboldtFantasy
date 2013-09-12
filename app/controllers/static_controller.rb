@@ -3,7 +3,7 @@ class StaticController < ApplicationController
 	end
 
 	def all_picks
-		@picks = Pick.all(:order => "created_at DESC")
+		@picks = Pick.all(:order => "updated_at DESC")
 		@users = User.all
 	end
 
