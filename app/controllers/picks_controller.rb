@@ -33,22 +33,22 @@ class PicksController < ApplicationController
 		@user = User.find(params[:user_id])
 	end
 
-	def edit
-    	@pick = Pick.find(params[:id])
-    	@user = @pick.user
-  	end
+	# def edit
+ #    	@pick = Pick.find(params[:id])
+ #    	@user = @pick.user
+ #  	end
 
-  	def update
-		@user = User.find(params[:user_id])
+ #  	def update
+	# 	@user = User.find(params[:user_id])
 
-  		@pick = Pick.find(params[:id])
+ #  		@pick = Pick.find(params[:id])
 
-  		if @pick.update_attributes(params[:pick])
-  			redirect_to user_pick_path
-  		else
-  			render action: "edit"
-  		end
-  	end
+ #  		if @pick.update_attributes(params[:pick])
+ #  			redirect_to user_pick_path
+ #  		else
+ #  			render action: "edit"
+ #  		end
+ #  	end
 
 	def destroy
         @pick = Pick.find(params[:id])
