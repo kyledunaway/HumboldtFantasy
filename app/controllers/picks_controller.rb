@@ -2,7 +2,11 @@ class PicksController < ApplicationController
 
 	def new
 		@user = User.find(params[:user_id])
-		@pick = Pick.new
+		if current_user.id == @user.id
+			@pick = Pick.new
+		else
+			redirect_to user_path(current_user), notice: "Access Denied to Other Users Picks"
+		end
 	end
 
 	def create

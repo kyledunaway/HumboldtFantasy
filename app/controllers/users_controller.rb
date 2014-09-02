@@ -17,6 +17,9 @@ class UsersController < ApplicationController
 	def show
 		@user = User.find(params[:id])
 		@picks = @user.picks
+		if current_user.id != @user.id
+			redirect_to user_path(current_user), notice: "Acess Denied to Other Users"
+		end
 	end
 
 	def index
