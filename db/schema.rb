@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130828004307) do
+ActiveRecord::Schema.define(:version => 20140904172414) do
 
   create_table "comments", :force => true do |t|
     t.string   "commenter"
@@ -74,6 +74,36 @@ ActiveRecord::Schema.define(:version => 20130828004307) do
     t.integer  "player30"
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
+    t.string   "username1"
+    t.string   "username2"
+    t.string   "username3"
+    t.string   "username4"
+    t.string   "username5"
+    t.string   "username6"
+    t.string   "username7"
+    t.string   "username8"
+    t.string   "username9"
+    t.string   "username10"
+    t.string   "username11"
+    t.string   "username12"
+    t.string   "username13"
+    t.string   "username14"
+    t.string   "username15"
+    t.string   "username16"
+    t.string   "username17"
+    t.string   "username18"
+    t.string   "username19"
+    t.string   "username20"
+    t.string   "username21"
+    t.string   "username22"
+    t.string   "username23"
+    t.string   "username24"
+    t.string   "username25"
+    t.string   "username26"
+    t.string   "username27"
+    t.string   "username28"
+    t.string   "username29"
+    t.string   "username30"
   end
 
   create_table "users", :force => true do |t|
