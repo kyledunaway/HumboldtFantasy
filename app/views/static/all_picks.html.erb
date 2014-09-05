@@ -1,22 +1,89 @@
 <h2>Weekly Picks</h2>
 
 <table class = "table">
-	<thead>
-		<tr>
-			<th>Week Number</th>
-			<th>Username</th>
-			<th>Picks</th>
-			<th>Time </th>
-		</tr>
-	</thead>
-	<tbody>
-  <% @picks.each do |p| %>
-  	<tr>
-      <th><%=  p.week_number %> </th>
-      <th><%=  p.username %> </th>
-      <th><%=  p.pick_content %>       </th>
-      <th><%= l p.updated_at, :format => :sample %> </th>
-  	</tr>
-  <% end %>
-</tbody>
+  <thead>
+    <tr>
+      <th>Week #</th>
+      <th>Name</th>
+      <th>Picks</th>
+      <th>Time </th>
+    </tr>
+  </thead>
+  <tbody> 
+    <tr>
+      <td><a href="#" class="toggler" show-picks="1">1</a></td>
+      <td></td>
+      <td></td>
+      <td></td>
+    </tr>
+    <% @week1.reverse_each do |w| %>
+    <tr class="week1" style="display:none">
+      <td></td>
+      <td><%= w.username %></td>
+      <td><%= w.pick_content %></td>
+      <td><%=l w.updated_at, :format => :sample %></td>
+    </tr>
+    <% end %>
+
+     <tr>
+      <td><a href="#" class="toggler" show-picks="2">2</a></td>
+      <td></td>
+      <td></td>
+      <td></td>
+    </tr>
+    <% @week2.reverse_each do |w| %>
+    <tr class="week2" style="display:none">
+      <td></td>
+      <td><%= w.username %></td>
+      <td><%= w.pick_content %></td>
+      <td><%=l w.updated_at, :format => :sample %></td>
+    </tr>
+    <% end %>
+
+     <tr>
+      <td><a href="#" class="toggler" show-picks="3">3</a></td>
+      <td></td>
+      <td></td>
+      <td></td>
+    </tr>
+    <% @week3.reverse_each do |w| %>
+    <tr class="week3" style="display:none">
+      <td></td>
+      <td><%= w.username %></td>
+      <td><%= w.pick_content %></td>
+      <td><%=l w.updated_at, :format => :sample %></td>
+    </tr>
+    <% end %>
+
+     <tr>
+      <td><a href="#" class="toggler" show-picks="4">4</a></td>
+      <td></td>
+      <td></td>
+      <td></td>
+    </tr>
+    <% @week4.reverse_each do |w| %>
+    <tr class="week2" style="display:none">
+      <td></td>
+      <td><%= w.username %></td>
+      <td><%= w.pick_content %></td>
+      <td><%=l w.updated_at, :format => :sample %></td>
+    </tr>
+    <% end %>
+
+     <tr>
+      <td><a href="#" class="toggler" show-picks="5">5</a></td>
+      <td></td>
+      <td></td>
+      <td></td>
+    </tr>
+    <% @week5.reverse_each do |w| %>
+    <tr class="week2" style="display:none">
+      <td></td>
+      <td><%= w.username %></td>
+      <td><%= w.pick_content %></td>
+      <td><%=l w.updated_at, :format => :sample %></td>
+    </tr>
+    <% end %>
+
+  </tbody>
 </table>
