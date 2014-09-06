@@ -13,6 +13,8 @@ HumboldtFantasy::Application.routes.draw do
 
   get "static/rules"
 
+  get "static/pick_order"
+
   root :to => "sessions#new"
   
   resources :users do

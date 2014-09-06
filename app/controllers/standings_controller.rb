@@ -15,6 +15,39 @@ class StandingsController < ApplicationController
   def show
     @standing = Standing.find(params[:id])
 
+    @pointsArray = [[@standing.player1, @standing.username1],
+                    [@standing.player2, @standing.username2],
+                    [@standing.player3, @standing.username3],
+                    [@standing.player4, @standing.username4],
+                    [@standing.player5, @standing.username5],
+                    [@standing.player6, @standing.username6],
+                    [@standing.player7, @standing.username7],
+                    [@standing.player8, @standing.username8],
+                    [@standing.player9, @standing.username9],
+                    [@standing.player10, @standing.username10],
+                    [@standing.player11, @standing.username11],
+                    [@standing.player12, @standing.username12],
+                    [@standing.player13, @standing.username13],
+                    [@standing.player14, @standing.username14],
+                    [@standing.player15, @standing.username15],
+                    [@standing.player16, @standing.username16],
+                    [@standing.player17, @standing.username17],
+                    [@standing.player18, @standing.username18],
+                    [@standing.player19, @standing.username19],
+                    [@standing.player20, @standing.username20],
+                    [@standing.player21, @standing.username21],
+                    [@standing.player22, @standing.username22],
+                    [@standing.player23, @standing.username23],
+                    [@standing.player24, @standing.username24],
+                    [@standing.player25, @standing.username25],
+                    [@standing.player26, @standing.username26],
+                    [@standing.player27, @standing.username27],
+                    [@standing.player28, @standing.username28],
+                    [@standing.player29, @standing.username29],
+                    [@standing.player30, @standing.username30]
+                   ]
+
+    @pointsArray = @pointsArray.sort_by{|a,b| a}.reverse
     respond_to do |format|
       format.html # show.html.erb
       format.json { render json: @standing }
@@ -35,6 +68,40 @@ class StandingsController < ApplicationController
   # GET /standings/1/edit
   def edit
     @standing = Standing.find(params[:id])
+
+    @pointsArray = [[@standing.player1, @standing.username1],
+                    [@standing.player2, @standing.username2],
+                    [@standing.player3, @standing.username3],
+                    [@standing.player4, @standing.username4],
+                    [@standing.player5, @standing.username5],
+                    [@standing.player6, @standing.username6],
+                    [@standing.player7, @standing.username7],
+                    [@standing.player8, @standing.username8],
+                    [@standing.player9, @standing.username9],
+                    [@standing.player10, @standing.username10],
+                    [@standing.player11, @standing.username11],
+                    [@standing.player12, @standing.username12],
+                    [@standing.player13, @standing.username13],
+                    [@standing.player14, @standing.username14],
+                    [@standing.player15, @standing.username15],
+                    [@standing.player16, @standing.username16],
+                    [@standing.player17, @standing.username17],
+                    [@standing.player18, @standing.username18],
+                    [@standing.player19, @standing.username19],
+                    [@standing.player20, @standing.username20],
+                    [@standing.player21, @standing.username21],
+                    [@standing.player22, @standing.username22],
+                    [@standing.player23, @standing.username23],
+                    [@standing.player24, @standing.username24],
+                    [@standing.player25, @standing.username25],
+                    [@standing.player26, @standing.username26],
+                    [@standing.player27, @standing.username27],
+                    [@standing.player28, @standing.username28],
+                    [@standing.player29, @standing.username29],
+                    [@standing.player30, @standing.username30]
+                   ]
+
+    @pointsArray = @pointsArray.sort_by{|a,b| a}.reverse
   end
 
   # POST /standings

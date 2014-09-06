@@ -1,0 +1,127 @@
+<h1>Editing standing</h1>
+
+<%= form_for(@standing) do |f| %>
+  <% if @standing.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@standing.errors.count, "error") %> prohibited this standing from being saved:</h2>
+
+      <ul>
+      <% @standing.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+<div class = "row">
+<div class = "span3">
+  <div class="field">
+    <%= f.label @standing.username1 %>
+    <%= f.number_field :player1 %>
+    <br><br/>
+    <%= f.label @standing.username2 %>
+    <%= f.number_field :player2 %>
+    <br><br/>
+    <%= f.label @standing.username3 %>
+    <%= f.number_field :player3 %>
+    <br><br/>
+    <%= f.label @standing.username4 %>
+    <%= f.number_field :player4 %>
+    <br><br/>
+    <%= f.label @standing.username5 %>
+    <%= f.number_field :player5 %>
+    <br><br/>
+    <%= f.label @standing.username6 %>
+    <%= f.number_field :player6 %>
+    <br><br/>
+    <%= f.label @standing.username7 %>
+    <%= f.number_field :player7 %>
+    <br><br/>
+     <%= f.label @standing.username8 %>
+     <%= f.number_field :player8 %>
+    <br><br/>
+     <%= f.label @standing.username9 %>
+     <%= f.number_field :player9 %>
+    <br><br/>
+     <%= f.label @standing.username10 %>
+     <%= f.number_field :player10 %>
+    <br><br/>
+  </div>
+  </div>
+
+<div class="span3">
+  <div class= "field">
+  	 <%= f.label @standing.username11 %>
+     <%= f.number_field :player11 %>
+    <br><br/>
+     <%= f.label @standing.username12 %>
+     <%= f.number_field :player12 %>
+    <br><br/>
+     <%= f.label @standing.username13 %>
+     <%= f.number_field :player13 %>
+    <br><br/>
+     <%= f.label @standing.username14 %>
+     <%= f.number_field :player14 %>
+    <br><br/>
+     <%= f.label @standing.username15 %>
+     <%= f.number_field :player15 %>
+    <br><br/>
+     <%= f.label @standing.username16 %>
+     <%= f.number_field :player16 %>
+    <br><br/>
+     <%= f.label @standing.username17 %>
+     <%= f.number_field :player17 %>
+    <br><br/>
+     <%= f.label @standing.username18 %>
+     <%= f.number_field :player18 %>
+    <br><br/>
+    <%= f.label @standing.username19 %>
+    <%= f.number_field :player19 %>
+    <br><br/>
+    <%= f.label @standing.username20 %>
+    <%= f.number_field :player20 %>
+    <br><br/>
+    </div>
+    </div>
+<div class="span3">
+  <div class= "field">
+    <%= f.label @standing.username21 %>
+    <%= f.number_field :player21 %>
+    <br><br/>
+    <%= f.label @standing.username22 %>
+    <%= f.number_field :player22 %>
+    <br><br/>
+    <%= f.label @standing.username23 %>
+    <%= f.number_field :player23 %>
+    <br><br/>
+    <%= f.label @standing.username24 %>
+    <%= f.number_field :player24 %>
+    <br><br/>
+    <%= f.label @standing.username25 %>
+    <%= f.number_field :player25 %>
+    <br><br/>
+    <%= f.label @standing.username26 %>
+    <%= f.number_field :player26 %>
+    <br><br/>
+    <%= f.label @standing.username27 %>
+    <%= f.number_field :player27 %>
+    <br><br/>
+    <%= f.label @standing.username28 %>
+    <%= f.number_field :player28 %>
+    <br><br/>
+    <%= f.label @standing.username29 %>
+    <%= f.number_field :player29 %>
+    <br><br/>
+    <%= f.label @standing.username30 %>
+    <%= f.number_field :player30 %>
+    <br><br/>
+  </div>    
+  </div>
+  <br><br/>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
+
+<%= link_to 'Show', @standing %> |
+<%= link_to 'Back', standings_path %>
