@@ -1,7 +1,7 @@
 HumboldtFantasy::Application.routes.draw do
 
+  resources :line_posts
   resources :standings
-
 
   get "log_out" => "sessions#destroy", :as => "log_out"
   get "log_in" => "sessions#new", :as => "log_in"
@@ -14,6 +14,8 @@ HumboldtFantasy::Application.routes.draw do
   get "static/rules"
 
   get "static/pick_order"
+
+  get "static/pick_history"
 
   root :to => "sessions#new"
   

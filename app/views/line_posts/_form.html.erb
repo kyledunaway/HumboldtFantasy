@@ -1,0 +1,27 @@
+<%= form_for(@line_post) do |f| %>
+  <% if @line_post.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@line_post.errors.count, "error") %> prohibited this line_post from being saved:</h2>
+
+      <ul>
+      <% @line_post.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+<div class="field">
+    <%= f.label "Week Number" %><br />
+    <%= f.text_field :title %>
+  </div>
+
+  <div class="field">
+    <%= f.label "Content" %><br />
+    <%= f.text_area :content %>
+  </div>
+  
+  <div class="actions">
+    <%= f.submit  "Create Line Post"%>
+  </div>
+<% end %>

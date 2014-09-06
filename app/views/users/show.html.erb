@@ -1,39 +1,67 @@
 
+<h2><center>Welcome to the Humboldt Fantasy Football Betting League</center></h2>
 <div class = "row">
-	<h2>Welcome to the Humboldt Fantasy Football Betting League</h2>
 	<div class = "span6">
-
 		<% if current_user.id != @user.id %>
 			<h3>You Are Accessing A User's Page That Isn't Yours</h3>
 		<% else %>
 
+		<div style="border:1px solid black; padding-left:10%;">
+			<h3><%= link_to "Send the President Your Weekly Picks" , new_user_pick_path(@user, @user.user_id) %> </h3>
+
+			<h3><%= link_to "View My Weekly Picks" , user_picks_path(@user, @pick) %></h3>
+		</div>
+
+		<br>
+
+		<div style="border:1px solid black; padding-left:10%;">
+			<h3><%= link_to "League Picks", static_pick_history_path %></h3>
+
+			<h3><%= link_to "Weekly Lines and Cash Bets", line_posts_path %></h3>
+		</div>
+
+		<br>
+
+		<div style="border:1px solid black; padding-left:10%;">
+			<h3><%= link_to "Message Board", posts_path %></h3>
+
+			<h3><%= link_to "Show Standings", standing_path(1) %></h3>
+		</div>
+
+		<br>
+
+		<div style="border:1px solid black; padding-left:10%;">
+
+			<h3><%= link_to "BET2WIN", "http://bet2win.ag", :target => '_blank' %></h3>
+			<h5>Username = ts104 Password = 123</h5>
+			<h3><%= link_to "Pick Order" , static_pick_order_path %></h3>
+			<h3><%= link_to "Rules" , static_rules_path %></h3>
 		
-
-		<h3><%= link_to "Send the President Your Weekly Picks" , new_user_pick_path(@user, @user.user_id) %> </h3>
-
-		<h3><%= link_to "View My Weekly Picks" , user_picks_path(@user, @pick) %></h3>
-
-
-		<h3><%= link_to "Message Board", posts_path %></h3>
-
-		<h3><%= link_to "Show Standings", standing_path(1) %></h3>
-
-		<h3><%= link_to "BET2WIN", "http://bet2win.ag", :target => '_blank' %></h3>
-
-		<h6>Username = ts104   Password = 123 </h6>
-
-		<h3><%= link_to "Rules" , static_rules_path %></h3>
-
-		<h3><%= link_to "Pick Order" , static_pick_order_path %></h3>
-
-		<% if current_user.id == 2 %>
-			<h3>------- COMMISSIONER LINKS -------</h3>
-	    	<h3><%= link_to "All Picks",  static_all_picks_path %></h3>
-		<% end %> 
-	<% end %>
+		</div>
 	</div>
+
 
 	<div class = "span6">
-		<img src = "http://i.imgur.com/PbVsLKb.jpg">
+		<div>
+			<img src = "http://i.imgur.com/PbVsLKb.jpg">
+		</div>
+		<br>
+		<% if current_user.id == 2 %>
+		<h3><center>COMMISSIONER LINKS</center></h3>
+			<div style="border:1px solid black; padding-left:3%">
+			
+			
+
+	    	<h3><%= link_to "All Picks",  static_all_picks_path %></h3>
+
+	    	<h3><%= link_to "Edit Standings", edit_standing_path(1) %></h3>
+
+	    	<h3><%= link_to "Post Weekly Lines and Cash Bets"%></h3>
+	    </div>
+		<% end %> 
+		
+		</div>
 	</div>
 </div>
+
+<% end %>

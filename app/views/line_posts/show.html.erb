@@ -1,0 +1,17 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Title:</b>
+  <%= @line_post.title %>
+</p>
+
+<p>
+  <b>Content:</b>
+  <%= simple_format @line_post.content %>
+</p>
+
+
+
+
+<%= link_to 'Edit', edit_line_post_path(@line_post) %> |
+<%= link_to 'Back', line_posts_path %>

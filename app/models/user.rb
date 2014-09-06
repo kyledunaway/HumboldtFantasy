@@ -3,6 +3,7 @@ class User < ActiveRecord::Base
   
   has_many :picks
   has_many :posts
+  has_many :line_posts
   
   attr_accessor :password
   before_save :encrypt_password
