@@ -10,11 +10,21 @@
     </tr>
   </thead>
   <tbody> 
+  
     <tr>
-      <td></td>
+      <td><a href="#" class="toggler" show-picks="1">1</a></td>
       <td></td>
       <td></td>
       <td></td>
     </tr>
-  </tbody>
+    <% @week1.reverse_each do |w| %>
+    <tr class="week1" style="display:none">
+      <td></td>
+      <td><%= w.username %></td>
+      <td><%= w.pick_content %></td>
+      <td><%=l w.updated_at, :format => :sample %></td>
+    </tr>
+    <% end %>
+
+</tbody>
 </table>
