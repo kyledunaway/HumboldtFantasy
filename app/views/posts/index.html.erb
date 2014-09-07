@@ -3,7 +3,7 @@
 
 <h4><%= link_to "Post a New Message", new_post_path, :class => "new_message"%></h4>
   <% @posts.each do |post| %>
-    <div id="posts" style="border:1px solid black; padding-left:10%;">
+    <div id="posts" style="border:1px solid black; padding-left:5%; padding-right:5%">
     <h4><%= link_to post.title, post %></h4>
     <%= simple_format post.text %>
     <h6>Posted By: <%= post.user.username %> on <%= l post.created_at, :format => :sample %>
