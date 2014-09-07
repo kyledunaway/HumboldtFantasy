@@ -9,7 +9,7 @@
 </p>
 <br></br>
 <h4>Comments</h4>
-<%= render @post.comments %>
+<%= render @post.comments.order('created_at DESC').all %>
 <br></br>
 <h5>Add a comment:</h5>
 <%= render "comments/form" %>
