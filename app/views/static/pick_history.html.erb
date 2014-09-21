@@ -17,7 +17,7 @@
       <td></td>
       <td></td>
     </tr>
-    <% @week1.reverse_each do |w| %>
+    <% @week1.each do |w| %>
     <tr class="week1" style="display:none">
       <td></td>
       <td><%= w.username %></td>
@@ -32,7 +32,7 @@
       <td></td>
       <td></td>
     </tr>
-    <% @week2.reverse_each do |w| %>
+    <% @week2.each do |w| %>
     <tr class="week2" style="display:none">
       <td></td>
       <td><%= w.username %></td>
@@ -47,7 +47,7 @@
       <td></td>
       <td></td>
     </tr>
-    <% @week3.reverse_each do |w| %>
+    <% @week3.each do |w| %>
     <tr class="week3" style="display:none">
       <td></td>
       <td><%= w.username %></td>
