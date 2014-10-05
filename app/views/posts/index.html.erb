@@ -7,7 +7,12 @@
     <h4><%= link_to post.title, post %></h4>
     <%= simple_format post.text %>
     <h6>Posted By: <%= post.user.username %> on <%= l post.created_at, :format => :sample %>
-    <h6><%= link_to "Comments", post_path(post), :class => "comments" %> (<%= post.comments.count %>)</h6>
+
+    <h6 style="color: red; cursor: pointer;" onclick="toggle_visibility('foo');"> Comments (<%= post.comments.count %>)</h6>
+    <div id="foo" style='display:none;'>
+        <%= render post.comments.order('created_at DESC').all %>
+    </div>
+
     <% if current_user.id == post.user.id %>
     <%= link_to "Edit   ", edit_post_path(post) %>
     <%= link_to '|   Delete', post, :method => :delete, :confirm => "Are you sure?" %>
@@ -18,4 +23,12 @@
 
 
 
-
+<script type="text/javascript">
+    function toggle_visibility(id) {
+       var e = document.getElementById(id);
+       if(e.style.display == 'none')
+          e.style.display = 'block';
+       else
+          e.style.display = 'none';
+    }
+</script>
