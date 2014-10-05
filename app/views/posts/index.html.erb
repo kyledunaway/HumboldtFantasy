@@ -8,10 +8,9 @@
     <%= simple_format post.text %>
     <h6>Posted By: <%= post.user.username %> on <%= l post.created_at, :format => :sample %>
 
-    <h6 style="color: red; cursor: pointer;" onclick="toggle_visibility('foo');"> Comments (<%= post.comments.count %>)</h6>
-    <div id="foo" style='display:none;'>
-        hey
-        
+    <h6 style="color: red; cursor: pointer;" onclick="toggle_visibility('<%= dom_id(post) %>');"> Comments (<%= post.comments.count %>)</h6>
+    <div id="<%= dom_id(post) %>" style='display:none;'>
+        <%= render post.comments.order('created_at DESC').all %>
     </div>
 
     <% if current_user.id == post.user.id %>
