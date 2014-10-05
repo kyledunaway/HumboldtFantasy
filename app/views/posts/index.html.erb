@@ -10,7 +10,8 @@
 
     <h6 style="color: red; cursor: pointer;" onclick="toggle_visibility('foo');"> Comments (<%= post.comments.count %>)</h6>
     <div id="foo" style='display:none;'>
-        <%= render post.comments.order('created_at DESC').all %>
+        hey
+        
     </div>
 
     <% if current_user.id == post.user.id %>
