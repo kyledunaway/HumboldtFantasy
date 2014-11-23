@@ -191,6 +191,21 @@
     </tr>
     <% end %>
 
+    <tr>
+      <td><a href="#" class="toggler" show-picks="13">13</a></td>
+      <td></td>
+      <td></td>
+      <td></td>
+    </tr>
+    <% @week13.each do |w| %>
+    <tr class="week13" style="display:none">
+      <td></td>
+      <td><%= w.username %></td>
+      <td><%= w.pick_content %></td>
+      <td><%=l w.updated_at, :format => :sample %></td>
+    </tr>
+    <% end %>
+
   </tbody>
 </table>
 <% end %>
